@@ -4,7 +4,6 @@ from PIL import Image
 import pandas as pd
 
 # Set Tesseract path
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 st.title("AI Invoice Auditor")
 
@@ -51,5 +50,6 @@ if uploaded_file:
     df = pd.DataFrame(data)
 
     st.subheader("Overcharge Summary")
+
 
     st.bar_chart(df.set_index("Issue"))
